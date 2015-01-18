@@ -9,26 +9,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+//import org.testng.annotations.AfterClass;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.Test;
 
 public class AutoCompleteExample {
 	WebDriver driver;
 	WebDriverWait wait;
-	String url = "";
+	String url = "http://jqueryui.com/resources/demos/datepicker/other-months.html";
 
 	private By frameLocator = By.className("demo-frame");
 	private By tagText = By.id("tags");
 
-	@BeforeClass
+//	@BeforeClass
 	public void Setup() {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		wait = new WebDriverWait(driver, 5);
 	}
 
-	@Test
+//	@Test
 	public void rightClickTest() {
 		driver.navigate().to(url);
 		WebElement frameElement = driver.findElement(frameLocator);
@@ -81,7 +81,7 @@ public class AutoCompleteExample {
 		}
 	}
 
-	@AfterClass
+//	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
@@ -90,3 +90,4 @@ public class AutoCompleteExample {
 
 
 //Reference tutorials - http://seleniumeasy.com/selenium-tutorials
+//http://docs.seleniumhq.org/docs/03_webdriver.jsp
